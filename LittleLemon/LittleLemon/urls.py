@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from LittleLemonAPI import views
-""" router = routers.DefaultRouter()
-router.register(r'menuitems', views.menuViewSet) """
+from restaurant import views
+
+router = routers.DefaultRouter()
+router.register(r'tables', views.BookingViewSet)
 
 """ urlpatterns = [
     path('api/', include(router.urls)),
@@ -29,8 +31,11 @@ router.register(r'menuitems', views.menuViewSet) """
     path('api-auth/', include('rest_framework.urls'))
 ] """
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('LittleLemonAPI.urls')),
     path('restaurant/', include('restaurant.urls')),
+    path('restaurant/menu/', include ('restaurant.urls')),
+    path('restaurant/booking/', include(router.urls)),
 ]
