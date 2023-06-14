@@ -22,6 +22,18 @@ from restaurant import views
 router = routers.DefaultRouter()
 router.register(r'tables', views.BookingViewSet)
 
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('LittleLemonAPI.urls')),
+    path('restaurant/', include('restaurant.urls')),
+    path('restaurant/menu/', include ('restaurant.urls')),
+    path('restaurant/booking/', include(router.urls)),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
+]
+
+
 """ urlpatterns = [
     path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
@@ -30,12 +42,3 @@ router.register(r'tables', views.BookingViewSet)
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls'))
 ] """
-
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('LittleLemonAPI.urls')),
-    path('restaurant/', include('restaurant.urls')),
-    path('restaurant/menu/', include ('restaurant.urls')),
-    path('restaurant/booking/', include(router.urls)),
-]

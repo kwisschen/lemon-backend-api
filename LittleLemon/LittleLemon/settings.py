@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'LittleLemonAPI',
     'rest_framework.authtoken',
     'restaurant',
+    'djoser',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +147,5 @@ REST_FRAMEWORK = {
     ),
 
 }
+
+DJOSER={"USER_ID_FIELD":"username"}

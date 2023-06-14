@@ -1,12 +1,10 @@
 from django.urls import path
-from rest_framework import routers
 from . import views
-from rest_framework.authtoken.views import obtain_auth_token
-
+from djoser.views import UserViewSet
 
 urlpatterns = [
     path('menu-items/', views.MenuItemsView.as_view()),
-    path('menu-items/<int:pk>', views.SingleMenuItemView.as_view()),
+    path('menu-items/<int:pk>/', views.SingleMenuItemView.as_view()),
     path('message/', views.msg),
-    path('api-token-auth/', obtain_auth_token)
+    path('users/', UserViewSet.as_view({'get': 'list'}), name='user-list'),  # List all registered users
 ]
