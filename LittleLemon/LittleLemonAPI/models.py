@@ -6,8 +6,10 @@ class MenuItem(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     inventory = models.SmallIntegerField()
 
+
     def get_item(self):
         return f'{self.title} : {str(self.price)}'
 
     def __str__(self):
         return self.get_item()
+
