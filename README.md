@@ -9,7 +9,7 @@
 
 4. **Run 'python manage.py runserver'**
 
-5. **Click on the link to the localhost url (getting a 404 page at the beginning is normal w/o valid endpoints)**
+5. **Click on the link to the localhost URL (getting a 404 page at the beginning is normal w/o valid endpoints)**
 
 6. __***IMPORTANT***:  Add the following endpoints at the end of the URL to test API functions__
 
