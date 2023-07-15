@@ -1,4 +1,4 @@
-# Little Lemon RESTful API Project
+# Little Lemon RESTful API
 
 ### Suggested endpoints for testing (with _Insomnia_):
 1. **View index page:** /restaurant/ (GET)
