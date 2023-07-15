@@ -1,5 +1,16 @@
 # Little Lemon RESTful API
 
+### How to view the project:
+1. **Clone repo**
+
+2. **Run 'pipenv install' in the terminal (under the correct directory)**
+
+3. **Run 'pipenv shell' to activate our virtual environment**
+
+4. **Run 'python manage.py runserver'**
+
+5. **Click on the link to the localhost url**
+
 ### Suggested endpoints for testing (with _Insomnia_):
 1. **View index page:** /restaurant/ (GET)
 
